@@ -1,0 +1,33 @@
+
+---
+- name: Update n3 servers
+  hosts: n3
+  
+  tasks:
+    - name: Create directory on n3
+      file:
+        path: /home/ec2-user/new_dir
+        state: directory
+
+- name: Update n4 servers
+  hosts: n4
+
+  tasks:
+    - name: Create directory on n4
+      file:
+        path: /home/ecz-user/new_dir
+        state: directory
+
+- name: Update group1 servers
+  hosts: g2
+  tasks:
+    - name: Create directory on g2
+      file:
+        path: /home/ec2-user/new_dir
+        state: directory
+
+...
+
+
+
+
