@@ -2,7 +2,7 @@
 ---
 - name: Update n3 servers
   hosts: n3
-  
+
   tasks:
     - name: Create directory on n3
       file:
@@ -17,13 +17,14 @@
       file:
         path: /home/ecz-user/new_dir
         state: directory
+      become: true
 
 - name: Update group1 servers
   hosts: g2
   tasks:
     - name: Create directory on g2
       file:
-        path: /home/ec2-user/new_dir
+        path: /home/ec2-user/new_dir_group_1
         state: directory
 
 ...
