@@ -1,0 +1,15 @@
+---
+- name: under maintenance
+  hosts: n4
+  become: true
+  
+  tasks:
+
+    - name: update maintenance
+      copy:
+        src: 06-maintenance.yaml
+        dest: /var/www/html
+
+
+
+...
