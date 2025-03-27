@@ -9,6 +9,8 @@
       copy:
         src: 06-maintenance.yaml
         dest: /var/www/html/index.html
+        remote_src: yes
+        force: yes
 
 
 
