@@ -9,8 +9,7 @@
       copy:
         src: site maintain.html
         dest: /var/www/html/index.html
-        remote_src: yes
-        force: yes
+        
 
 
 
