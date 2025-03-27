@@ -1,0 +1,24 @@
+
+---
+- name: Deploy a web app
+  hosts: n4
+  become: true
+  
+  tasks:
+    - name: Install git
+      ansible.builtin.yum:
+        name: git
+        state: present
+
+    - name: host code
+      git:
+        repo: https://github.com/CeeyIT-Solutions/food3.git
+        dest: /var/www/html
+        
+
+
+...
+
+
+
+
