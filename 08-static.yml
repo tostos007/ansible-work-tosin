@@ -1,0 +1,16 @@
+---
+- name: under maintenance
+  hosts: g1
+  become: true
+  
+  tasks:
+
+    - name: update static page
+      copy:
+        src: static.html
+        dest: /var/www/html/index.html
+
+
+
+
+...
