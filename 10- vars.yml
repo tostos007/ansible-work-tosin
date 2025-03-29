@@ -1,0 +1,18 @@
+---
+- name: under maintenance
+  hosts: n3
+  become: true
+  vars:
+  myusername: TosinAdesewa
+  
+  tasks:
+
+    - name: update static page
+      template:
+        src: dynamic.j2
+        dest: /var/www/html/dynamic.html
+
+
+
+
+...
