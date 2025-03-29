@@ -1,0 +1,16 @@
+---
+- name: install HTTP server
+  hosts: n4
+  become: true
+  
+  tasks:
+
+    - name: update maintenance
+      copy:
+        src: site maintain.html
+        dest: /var/www/html/index.html
+        
+
+
+
+...
