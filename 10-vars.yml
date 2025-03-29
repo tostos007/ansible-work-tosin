@@ -1,9 +1,9 @@
 ---
-- name: under maintenance
+- name: variables demo
   hosts: n3
   become: true
   vars:
-  myusername: TosinAdesewa
+       myusername: TosinAdesewa
   
   tasks:
 
