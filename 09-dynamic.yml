@@ -8,7 +8,7 @@
     - name: update static page
       template:
         src: dynamic.j2
-        dest: /var/www/html/dynam.html
+        dest: /var/www/html/dynamic.html
 
 
 
