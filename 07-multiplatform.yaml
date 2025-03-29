@@ -1,5 +1,4 @@
 ---
----
 - name: Install packages based on distribution
   hosts: g2
   become: yes
