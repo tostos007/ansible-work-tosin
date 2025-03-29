@@ -1,0 +1,17 @@
+
+---
+- name: Update n5 servers
+  hosts: n5
+
+  tasks:
+    - name: Create directory on n5
+      file:
+        path: /home/ubuntu/new_dir
+        state: directory
+
+
+...
+
+
+
+
