@@ -1,6 +1,6 @@
 ---
 - name: under maintenance
-  hosts: g1
+  hosts: n3
   become: true
   
   tasks:
