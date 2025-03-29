@@ -1,15 +1,29 @@
 ---
-- name: install HTTP server
-  hosts: n4
-  become: true
-  
+---
+- name: Install packages based on distribution
+  hosts: g2
+  become: yes
   tasks:
 
-    - name: update maintenance
-      copy:
-        src: site maintain.html
-        dest: /var/www/html/index.html
-        
+    - name: Install Apache on Ubuntu
+      apt:
+        name: apache2
+        state: present
+        update_cache: yes
+      when: ansible_distribution == "Ubuntu"
+
+    - name: Install Apache on Amazon Linux
+      yum:
+        name: httpd
+        state: present
+      when: ansible_distribution == "Amazon"
+
+    - name: Start and enable Apache (common for all)
+      service:
+        name: "{{ 'apache2' if ansible_distribution == 'Ubuntu' else 'httpd' }}"
+        state: started
+        enabled: yes
+
 
 
 
