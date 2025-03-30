@@ -5,8 +5,8 @@
   become: true
   
   roles:
-  -apache
-  -php
+   -apache
+   -php
     
 
 ...
