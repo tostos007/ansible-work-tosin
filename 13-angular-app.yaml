@@ -1,13 +1,12 @@
 
 ---
-- name: Deploy a web app
+- name: Deploy a angular app
   hosts: n6
   become: true
   
   roles:
   -apache
-  -html
-    
+  -angular    
 
 ...
 
