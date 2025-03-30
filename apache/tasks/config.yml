@@ -1,14 +1,14 @@
 ---
-task:
-  - name: update static page
-    copy:
-      src: static.html
-      dest: /var/www/html/index.html
+---
+- name: update static page
+  copy:
+    src: static.html
+    dest: /var/www/html/index.html
 
-  - name: update dynamic page
-    template:
-      src: dynamic.j2
-      dest: /var/www/html/dynamic.html
+- name: update dynamic page
+  template:
+    src: dynamic.j2
+    dest: /var/www/html/dynamic.html
 
 
 ...
