@@ -1,3 +1,4 @@
 ---
 # tasks file for apache
-myusername: TosinAdesewa
+-import_task: install.yml
+-import_task: config.yml
