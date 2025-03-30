@@ -1,5 +1,5 @@
 ---
----
+
 - name: update static page
   copy:
     src: static.html
