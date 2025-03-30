@@ -1,0 +1,25 @@
+---
+
+    - name: Install Apache on Ubuntu
+      apt:
+        name: apache2
+        state: present
+        update_cache: yes
+      when: ansible_distribution == "Ubuntu"
+
+    - name: Install Apache on Amazon Linux
+      yum:
+        name: httpd
+        state: present
+      when: ansible_distribution == "Amazon"
+
+    - name: Start and enable Apache (common for all)
+      service:
+        name: "{{ 'apache2' if ansible_distribution == 'Ubuntu' else 'httpd' }}"
+        state: started
+        enabled: yes
+
+
+
+
+...
